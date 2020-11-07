@@ -25,7 +25,7 @@ const hash = require("./helpers/hash");
         console.log('Bootstrap | Create admin user');
         const adminUser = new User({
             username: "administrator",
-            password: await hash("secr3t"),
+            password: await hash(process.env.PASSWORD),
             name: "Administrator",
             lastname: "",
             age: 0,

@@ -59,3 +59,17 @@ $ docker run -it --rm \
   -p 3000:3000 \
   disxt-test-task
 ```
+### Bootstrap the system
+Once we hace the container up and running, we need to do some initial setup, like creating a first user to start interacting with the system.
+```bash
+$ docker run -it --rm \
+  --name test-task \
+  --network=disxt-test-task \
+  -e DB_USER=root \
+  -e DB_PASSWORD=secr3t \
+  -e DB_CONNECT=mongodb://mongodb:27017/products \
+  -e ADMIN_PASSWORD=secret \
+  -p 3000:3000 \
+  disxt-test-task \
+  node src/bootstrap.js
+```
