@@ -60,7 +60,7 @@ $ docker run -it --rm \
   disxt-test-task
 ```
 ### Bootstrap the system
-Once we hace the container up and running, we need to do some initial setup, like creating a first user to start interacting with the system.
+Once we have the container up and running, we need to do some initial setup, like creating a first user to start interacting with the system.
 ```bash
 $ docker run -it --rm \
   --name test-task \
